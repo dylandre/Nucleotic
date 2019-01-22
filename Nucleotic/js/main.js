@@ -21,7 +21,7 @@ $(function() {
 	});
 	$('#logout').click(function(e){
 		$("#connexion").delay(500).fadeIn(500);
-		$('connected').fadeOut(500);
+		$('#connected').fadeOut(500);
 		e.preventDefault();
 	});
 });

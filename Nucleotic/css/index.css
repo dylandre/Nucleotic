@@ -21,23 +21,25 @@
 }
 .side-bandeau{
 	background-color: rgba(0,0,0,0.35);
-	text-align: center;
-	font-family: 'Permanent Marker', cursive;
 	margin-left: 2%;
 	height: 100%;
 	position: fixed;
+}
+.col-side{
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
 }
 .title{
 	font-size: 42px;
 	color: white;
 	text-shadow: 0.1em 0.1em 0.2em #000;
-	margin : 15% 0 0 0;
+	margin : 15% 0 0 19%;
 }
 .separator{
 	color: white;
 	text-shadow: 0.1em 0.1em 0.2em #000;
 	opacity: 0.35;
-	margin-top: 10%;
+	margin: 10% 0 0 25%;
 }
 .container-button{
 	text-align: center;
@@ -46,7 +48,7 @@
 }
 .side-btn{
 	display: block;
-	margin: 10% 0 10% 0;
+	margin: 10% 0 10% 15%;
 	font-size: 20px;
 	width: 200px;
 	color: white;
