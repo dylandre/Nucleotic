@@ -1,3 +1,9 @@
+* {
+	
+	outline: 0 !important;
+	outline-style: none !important;
+}
+
 #body{
 	height: 100%;
 	width: 100%;
@@ -13,97 +19,236 @@
 	height: 100%;
 	z-index: -1;
 }
-.title-connexion{
-	font-size: 64px;
-	font-family: American Typewriter, serif;
-	text-shadow: 0.1em 0.1em 0.2em #000;
-	text-align: center;
-	margin: 60px 0 0 0;
-}
-#bandeau-connected{
-	background-color: rgba(200,200,200,1);
-	box-shadow: 0px 2px 4px rgba(0,0,0,0.6);
-	color: #fff;
+#connected{
 	z-index: 10;
 }
-.title{
-	font-size: 46px;
-	text-shadow: 0.1em 0.1em 0.2em #000;
-	margin : 0;
-}
-img{
-	width: 8%;
-}
-.login{
-	text-align: right;
-}
-.login > .fa{
+.side-bandeau{
+	background-color: rgba(0,0,0,0.35);
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
 	margin-left: 2%;
-	margin-right: 7%;
-	cursor: pointer;
-}
-.num{
-	position: absolute;
-    top: 15%;
-    right: 22%;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: gray;
-    color: #fff;
-    line-height: 25px;
-    font-family: sans-serif;
-    text-align: center;
-}
-#logout{
-	color: white;
-}
-#logout:hover{
-	color: red;
-}
-.admin, .logout{
-	font-size: 24px;
-	text-shadow: 0.1em 0.1em 0.2em #000;
-	cursor: pointer;
-	display: inline-block;
-	margin-top: 2%;
-}
-.container-sidebar{
-	position: fixed;
-	background-color: rgba(0,0,0,0.75);
 	height: 100%;
-	width: 15%;
+	position: fixed;
+}
+
+.title{
+	font-size: 42px;
+	color: white;
+	text-shadow: 0.1em 0.1em 0.2em #000;
+	margin : 15% 0 0 0;
+}
+.separator{
+	color: white;
+	text-shadow: 0.1em 0.1em 0.2em #000;
+	opacity: 0.35;
+	margin-top: 10%;
+}
+.container-button{
 	text-align: center;
-	padding: 15% 0 0 0;
+	margin-top: 70%;
+	padding-left: 13%;
 }
-.container-sidebar > .row{
-	margin: 0 0 20px 0;
+.side-btn{
+	display: block;
+	margin: 10% 0 10% 0;
+	font-size: 20px;
+	width: 200px;
+	color: white;
+	background-color: rgba(255,255,255,0.6);
+	text-shadow: 0.1em 0.1em 0.2em #000;
+	border-radius: 25px;
+	border: none;
+	outline: 0;
+	outline-style: none;
 }
-.btn{
-	font-size: 18px;
-}
-.btn:hover{
-	background-color: lightgray;
-	color: black;
-}
-.container-bdd{
-	padding: 50px 30px 0 0;
-	z-index: 10;
-}
-.col-title{
-	text-align: center;
-}
-.title-bdd{
-	font-size: 50px;
-	font-family: American Typewriter, serif;
-	color: #000;
+.side-btn:hover{
+	background-color: rgba(255,255,255,0.3);
 	text-shadow: 0.1em 0.1em 0.2em #fff;
-	margin-bottom: 20px;
 }
-.bdd-name{
+.side-btn:active{
+border: 0;
+outline: 0;
+outline-style: none;
+}
+.row-notification{
+	display: flex;
+}
+.col-logo{
+	margin-top: 1%;
+	margin-left: 2%;
+}
+.col-logo img{
+	width: 15%;
+}
+.col-notification{
+	text-align: right;
+	padding-right: 0;
+	background-image: url("../images/bandeau-notification.png");
+	background-size: cover;
+	margin-top: 5%;
+}
+.col-notification img{
+	margin-top: 5%;
+}
+.col-notification .fa-bell{
+	margin: 0 10% 0 5%;
+	color: gray;
+}
+.col-notification .pseudo-login{
+	font-size: 32px;
+	font-family: "Arial";
+	color: black;
+	margin-right: 30px;
+	margin-top: 8%;
+}
+
+.img-connection {
+	margin-top: 5%;
+	text-align: center;
+}
+.img-connection img{
+	width: 15%;
+}
+.row-bdd{
+	margin: 0 0 0 2.5%;
+}
+
+#recherche {
+	background-image: url('../images/search.png');
+	background-size: 3%;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	width: 75%;
+	font-size: 16px;
+	padding: 12px 20px 12px 50px;
+	border: 1px solid #ddd;
+	border-radius: 25px;
+	margin: 7%;
+	outline: 0;
+  }
+  
+  #liste {
+	list-style-type: none;
+	padding: 0;
 	margin: 0;
+  }
+
+  .fas {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 34px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	margin-bottom: 5px;
+	background-color: gray;
 }
-#button-connexion{
-	width: 5%;
-	float: right;
+
+.fas::before, 
+.fas::after {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.fas::before {
+    display: block;
+    content: "\f0f3";
+    font-family: "FontAwesome";
+    transform-origin: top center;
+}
+
+.fas::after {
+    font-family: Arial;
+    font-size: 0.7em;
+    font-weight: 700;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding: 5px 8px;
+    line-height: 100%;
+    border: 2px #fff solid;
+    border-radius: 60px;
+    opacity: 0;
+    content: attr(data-count);
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    transition: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.fas.notify::before {
+    -webkit-animation: ring 1.5s ease;
+	animation: ring 1.5s ease;
+}
+
+.fas.show-count::after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+	opacity: 1;
+	background-color: gray;
+
+}
+
+@-webkit-keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 }
