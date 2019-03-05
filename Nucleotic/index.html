@@ -101,51 +101,91 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-2 side-bandeau">
-            <h3 class="title">NUCLEOTIC</h3>
+            <!--<h3 class="title">NUCLEOTIC</h3>
             <hr class="separator">
             <div class="container-button">
               <button type="button" class="btn btn-secondary btn-lg side-btn">Sauvegarder</button>
               <button type="button" class="btn btn-secondary btn-lg side-btn">Restaurer</button>
               <button type="button" class="btn btn-secondary btn-lg side-btn">Contact</button>
-              <button type="button" class="btn btn-secondary btn-lg side-btn">Déconnexion</button>
+              <button id="logout" type="button" class="btn btn-secondary btn-lg side-btn">Déconnexion</button>
+            </div>-->
+          </div>
+          <div class="col-md-2 col-side">
+            <h3 class="title">NUCLEOTIC</h3>
+            <hr class="separator">
+            <div class="container-button">
+              <button id="Sauvegarder" type="button" class="btn btn-secondary btn-lg side-btn">Sauvegarder</button>
+              <div id="MenuSave" style="display: none;">
+                <p id="title">Veuillez cocher les bases à sauvegarder</p>
+                <p id="subtitle">Listes des bases de données sélectionnées</p>
+                <hr class="separator-2">
+              </div>
+              <button id="Restaurer" type="button" class="btn btn-secondary btn-lg side-btn">Restaurer</button>
+              <div id="MenuBackup" style="display: none;">
+                <p id="title">Veuillez cocher la base à restaurer</p>
+                <hr class="separator-2">
+              </div>
+              <button id="Contact" type="button" class="btn btn-secondary btn-lg side-btn">Contact</button>
+              <div id="MenuContact" style="display: none;">
+                <p id="title">NUCLEOTIC</p>
+                <p id="subtitle">email :<br>téléphone :<br>adresse du siège<br></p>
+                <hr class="separator-2">
+              </div>
+              <button id="logout" type="button" class="btn btn-secondary btn-lg side-btn">Déconnexion</button>
+              <button id="Return" type="button" class="btn btn-secondary btn-lg side-btn" style="display: none;">Retour</button>
             </div>
           </div>
-          <div class="col-md-2"></div>
           <div class="col-md-10 side-bdd">
             <div class="row row-notification">
               <div class="col-md-6 col-logo">
                 <img src="images/logo.png" alt="logo-Nucleotic">
               </div>
               <div class="col-md-6 col-notification">
-                <img src="images/bandeau-notification.png" alt="bandeau-notification">
-                <p class="pseudo-login">Admin<i class="fas fa-bell"></i></p>
+                <p class="pseudo-login">Admin
+                  <i class="fas fa-bell"></i>
+                  <button type="button" class="btn btn-secondary" id="increment">Incrementer</button>
+                </p>
               </div>
             </div>
             <div class="row row-search">
               <div class="col-md-12 searchbar">
-                <input class="search_input" type="text" name="" placeholder="Search...">
+                <input class="search_input" type="text" id="recherche" onkeyup="myFunction()" placeholder="Rechercher une bdd...">
                 <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
               </div>
             </div>
             <div class="row row-bdd">
-              <div class="col-md-4">
-                <div class="panel panel-default">
-                  <div class="panel-heading">BASE DE DONNÉES N° 1</div>
-                  <div class="panel-body">INFORMATIONS DE LA BDD</div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="panel panel-default">
-                  <div class="panel-heading">BASE DE DONNÉES N° 2</div>
-                  <div class="panel-body">INFORMATIONS DE LA BDD</div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="panel panel-default">
-                  <div class="panel-heading">BASE DE DONNÉES N° 3</div>
-                  <div class="panel-body">INFORMATIONS DE LA BDD</div>
-                </div>
-              </div>
+              <ul id="liste">
+                <li>
+                  <div class="col-md-4">
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><img src="images/icons8-base-de-données-50.png" alt="logo-bdd">ANDRE
+                        <input type="checkbox" class="checkbox" onclick="checkfunction()" style=display:none>
+                      </div>
+                      <div class="panel-body">INFORMATIONS DE LA BDD</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="col-md-4">
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><img src="images/icons8-base-de-données-50.png" alt="logo-bdd">BENSMAINE
+                        <input type="checkbox" class="checkbox" onclick="checkfunction()" style=display:none>
+                      </div>
+                      <div class="panel-body">INFORMATIONS DE LA BDD</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="col-md-4">
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><img src="images/icons8-base-de-données-50.png" alt="logo-bdd">DRUJON
+                        <input type="checkbox" class="checkbox" onclick="checkfunction()" style=display:none>
+                      </div>
+                      <div class="panel-body">INFORMATIONS DE LA BDD</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
     </section>
