@@ -60,6 +60,7 @@ $(function() {
 		$('#MenuBackup').fadeOut(500);
 		$('#MenuContact').fadeOut(500);
 		$('.checkbox').fadeOut(500);
+		savefunction();
 		e.preventDefault();
 	});
 });
@@ -97,3 +98,42 @@ document.querySelector('.fas').addEventListener('click', function(){
 	el.setAttribute('data-count', count=0);
 	el.classList.remove('show-count');
 },false);
+
+function checkfunction(el) {
+	let checkBoxes = document.getElementsByClassName("checkbox");
+	let text = document.getElementById("text");
+	var SaveVisible = document.getElementById("Sauvegarder").offsetHeight;
+	var RestoVisible = document.getElementById("Restaurer").offsetHeight;
+	//el.checked? el.checked=false:el.checked=true;
+	console.log(checkBoxes)
+	console.log(el.dataset.name)
+	if(SaveVisible != 0){
+		document.getElementById("checkeddata").innerHTML="";
+	}else if(RestoVisible != 0){
+		document.getElementById("checkeddata-2").innerHTML="";
+	}
+	for(cb of document.getElementsByClassName("checkbox")){
+		if(cb.checked){
+			if(SaveVisible != 0){
+				document.getElementById("checkeddata").innerHTML+=cb.dataset.name+"<i class='fas fa-spinner fa-pulse'></i>"+"<br>";
+			}else if(RestoVisible != 0){
+				document.getElementById("checkeddata-2").innerHTML+=cb.dataset.name+"<i class='fas fa-spinner fa-pulse'></i>"+"<br>";
+			}
+		}
+	}
+
+};
+
+function savefunction() {
+	let checkBoxes = document.getElementsByClassName("checkbox");
+	let text = document.getElementById("text");
+	console.log(checkBoxes)
+	document.getElementById("checkeddata").innerHTML="";
+	for(cb of document.getElementsByClassName("checkbox")){
+		if(cb.checked){
+			document.getElementById("checkeddata").removeHTML+=cb.dataset.name+"<br>";
+			cb.checked=false;
+		}
+	}
+
+};

@@ -119,11 +119,13 @@
                 <p id="title">Veuillez cocher les bases à sauvegarder</p>
                 <p id="subtitle">Listes des bases de données sélectionnées</p>
                 <hr class="separator-2">
+                <p id="checkeddata"></p>
               </div>
               <button id="Restaurer" type="button" class="btn btn-secondary btn-lg side-btn">Restaurer</button>
               <div id="MenuBackup" style="display: none;">
                 <p id="title">Veuillez cocher la base à restaurer</p>
                 <hr class="separator-2">
+                <p id="checkeddata-2"></p>
               </div>
               <button id="Contact" type="button" class="btn btn-secondary btn-lg side-btn">Contact</button>
               <div id="MenuContact" style="display: none;">
@@ -159,7 +161,7 @@
                   <div class="col-md-4">
                     <div class="panel panel-default">
                       <div class="panel-heading"><img src="images/icons8-base-de-données-50.png" alt="logo-bdd">ANDRE
-                        <input type="checkbox" class="checkbox" onclick="checkfunction()" style=display:none>
+                        <input type="checkbox" class="checkbox" data-name="ANDRE" onclick="checkfunction(this)" style=display:none>
                       </div>
                       <div class="panel-body">INFORMATIONS DE LA BDD</div>
                     </div>
@@ -169,7 +171,7 @@
                   <div class="col-md-4">
                     <div class="panel panel-default">
                       <div class="panel-heading"><img src="images/icons8-base-de-données-50.png" alt="logo-bdd">BENSMAINE
-                        <input type="checkbox" class="checkbox" onclick="checkfunction()" style=display:none>
+                        <input type="checkbox" class="checkbox" data-name="BENSMAINE" onclick="checkfunction(this)" style=display:none>
                       </div>
                       <div class="panel-body">INFORMATIONS DE LA BDD</div>
                     </div>
@@ -179,7 +181,7 @@
                   <div class="col-md-4">
                     <div class="panel panel-default">
                       <div class="panel-heading"><img src="images/icons8-base-de-données-50.png" alt="logo-bdd">DRUJON
-                        <input type="checkbox" class="checkbox" onclick="checkfunction()" style=display:none>
+                        <input type="checkbox" class="checkbox" data-name="DRUJON" onclick="checkfunction(this)" style=display:none>
                       </div>
                       <div class="panel-body">INFORMATIONS DE LA BDD</div>
                     </div>

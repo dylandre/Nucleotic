@@ -288,3 +288,12 @@
 	width: 8%;
 	margin-right: 2%;
 }
+#checkeddata{
+	margin: 5% 0 0 15%;
+}
+#checkeddata-2{
+	margin: 5% 0 0 15%;
+}
+.fa-spinner{
+	margin-left: 5%;
+}
