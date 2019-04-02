@@ -15,8 +15,13 @@ $(function() {
 		e.preventDefault();
 	});
 	$('#login-submit').click(function(e){
-		$('#connected').delay(500).fadeIn(500);
-		$('#connexion').fadeOut(500);
+		if($("#username").val() == "admin" && $("#password").val() == "mdp")
+		{
+			$('#connected').delay(500).fadeIn(500);
+			$('#connexion').fadeOut(500);
+		}else{
+			alert("Mauvais user/mdp");
+		}
 		e.preventDefault();
 	});
 	$('#logout').click(function(e){
