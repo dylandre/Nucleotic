@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<title>Nucléotic</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+	<meta name="author" content="Nucléotic Startup">
+	<link href="images/logo.png" rel="icon" type="image/jpg">
+
+	<!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- -->
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <body id="index">
+  	<section id="background-window"></section>
+  	<section id="bdd-details">
+  		<div class="container-fluid">
+  			<div class="row">
+	  			<div class="col-md-2 side-bandeau"></div>
+	  			<div class="col-md-2 col-side">
+		  			<a href="../index.html"><h3 class="title">NUCLEOTIC</h3></a>
+		            <hr class="separator">
+		            <div class="container-button">
+		              <button id="Sauvegarder" type="button" class="btn btn-secondary btn-lg side-btn">Sauvegarder</button>
+		              <div id="MenuSave" style="display: none;">
+		                <p id="title">Veuillez cocher les bases à sauvegarder</p>
+		                <p id="subtitle">Listes des bases de données sélectionnées</p>
+		                <hr class="separator-2">
+		                <p id="checkeddata"></p>
+		              </div>
+		              <button id="Restaurer" type="button" class="btn btn-secondary btn-lg side-btn">Restaurer</button>
+		              <div id="MenuBackup" style="display: none;">
+		                <p id="title">Veuillez cocher la base à restaurer</p>
+		                <hr class="separator-2">
+		                <p id="checkeddata-2"></p>
+		              </div>
+		              <button id="Contact" type="button" class="btn btn-secondary btn-lg side-btn">Contact</button>
+		              <div id="MenuContact" style="display: none;">
+		                <p id="title">NUCLEOTIC</p>
+		                <p id="subtitle">email :<br>téléphone :<br>adresse du siège<br></p>
+		                <hr class="separator-2">
+		              </div>
+		              <button id="logout" type="button" class="btn btn-secondary btn-lg side-btn">Déconnexion</button>
+		              <button id="Return" type="button" class="btn btn-secondary btn-lg side-btn" style="display: none;">Retour</button>
+		            </div>
+	  			</div>
+	  			<div class="col-md-10 side-bdd">
+	  				<div class="row row-notification">
+						<div class="col-md-6 col-logo">
+							<a href="../index.html"><img src="../images/logo.png" alt="logo-Nucleotic"></a>
+						</div>
+						<div class="col-md-6 col-notification">
+							<p class="pseudo-login">Admin
+							<i class="fas fa-bell"></i>
+							<button type="button" class="btn btn-secondary" id="increment">Incrementer</button>
+							</p>
+						</div>
+			        </div>
+			        <div class="row row-bdd">
+			        	<div class="col-md-12">
+			        		<div class="panel panel-default">
+			        			<div class="panel-heading">
+			        				<img src="../images/icons8-base-de-données-50.png" alt="logo-bdd">ANDRE
+			        			</div>
+			        			<div class="panel-body">TOUTLES INFORMATIONS CONCERNANT LA BDD</div>
+			        		</div>
+			        	</div>
+			        </div>
+	  			</div>
+  			</div>
+  		</div>
+  	</section>
+  </body>
+  <script type="text/javascript" src="../js/main.js"></script>
+</html>

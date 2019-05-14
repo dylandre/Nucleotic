@@ -60,6 +60,10 @@
 	background-color: rgba(255,255,255,0.3);
 	text-shadow: 0.1em 0.1em 0.2em #fff;
 }
+.side-btn:focus{
+	background-color: rgba(255,255,255,0.3);
+	text-shadow: 0.1em 0.1em 0.2em #fff;
+}
 .row-notification{
 	display: flex;
 }
@@ -73,20 +77,23 @@
 .col-notification{
 	text-align: right;
 	padding-right: 0;
-}
-.col-notification img{
-	margin-top: 5%;
+	margin-top: 2%;
 }
 .col-notification .fa-bell{
-	margin: 0 10% 0 5%;
-	color: #00c6ff;
+	margin: 0 5% 0 5%;
+	/*color: #00c6ff;*/
 }
 .col-notification .pseudo-login{
 	font-size: 32px;
 	font-family: "Arial";
 	color: black;
 	margin-left: 5%;
-	margin-top: -8%;
+	background-image: url("../images/bandeau-notification.png");
+	background-size: cover;
+	padding: 1%;
+}
+.col-notification .pseudo-login button{
+	margin-right: 5%;
 }
 .searchbar{
 	margin: 5% 0 5% 13%;
@@ -114,6 +121,16 @@
 	align-items: center;
 	border-radius: 50%;
 	color: black;
+	cursor: default;
+}
+.search_icon:hover{
+	color: black;
+	text-decoration: none;
+}
+#liste {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 .img-connection {
 	margin-top: 5%;
@@ -124,4 +141,162 @@
 }
 .row-bdd{
 	margin: 0 0 0 2.5%;
+}
+.col-notification .pseudo-login .fas{
+	display: inline-block;
+    position: relative;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    /*padding: 10px;
+    border-radius: 5px;
+    font-size: 34px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	margin-bottom: 5px;
+	background-color: gray;*/
+}
+
+.col-notification .pseudo-login .fas::before, 
+.col-notification .pseudo-login .fas::after {
+    color: gray;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.col-notification .pseudo-login .fas::before {
+    display: block;
+    content: "\f0f3";
+    font-family: "FontAwesome";
+    transform-origin: top center;
+}
+
+.col-notification .pseudo-login .fas::after {
+    font-family: Arial;
+    font-size: 0.7em;
+    font-weight: 700;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding: 5px 8px;
+    line-height: 100%;
+    border: 2px #fff solid;
+    border-radius: 60px;
+    opacity: 0;
+    content: attr(data-count);
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    transition: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.col-notification .pseudo-login .fas.notify::before {
+    -webkit-animation: ring 1.5s ease;
+	animation: ring 1.5s ease;
+}
+
+.col-notification .pseudo-login .fas.show-count::after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+	opacity: 1;
+	background-color: white;
+
+}
+
+@-webkit-keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+#title{
+	font-size: 20px;
+	color: white;
+	text-shadow: 0.1em 0.1em 0.2em #000;
+	margin: 5% 0 0 15%;
+}
+#subtitle{
+	font-size: 16px;
+	color: white;
+	text-shadow: 0.1em 0.1em 0.2em #000;
+	margin: 5% 0 0 15%;
+}
+.separator-2{
+	color: white;
+	text-shadow: 0.1em 0.1em 0.2em #000;
+	opacity: 0.35;
+	margin: 10% 0 0 15%;
+}
+.side-bdd .panel-heading .checkbox{
+	float: right;
+	margin-top: 2.5%;
+}
+.side-bdd .panel-heading img{
+	width: 8%;
+	margin-right: 2%;
+}
+#checkeddata{
+	margin: 5% 0 0 15%;
+}
+#checkeddata-2{
+	margin: 5% 0 0 15%;
+}
+.fa-spinner{
+	margin-left: 5%;
+}
+a:hover{
+	text-decoration: none;
 }
